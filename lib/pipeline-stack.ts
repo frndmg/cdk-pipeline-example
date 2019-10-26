@@ -83,10 +83,10 @@ export class PipelineStack extends Stack {
             new codepipeline_actions.GitHubSourceAction({
               actionName: 'GitHub_Lambda_Source',
               owner: 'frndmg',
-              repo: 'lambda-nextjs-example',
+              repo: 'lambda-nextjs',
               output: lambdaSourceOutput,
               oauthToken: SecretValue.secretsManager('github-token'),
-              trigger: GitHubTrigger.POLL,
+              trigger: GitHubTrigger.WEBHOOK,
             }),
             new codepipeline_actions.GitHubSourceAction({
               actionName: 'GitHub_Pipeline_Source',
@@ -94,7 +94,7 @@ export class PipelineStack extends Stack {
               repo: 'cdk-pipeline-example',
               output: cdkSourceOutput,
               oauthToken: SecretValue.secretsManager('github-token'),
-              trigger: GitHubTrigger.POLL,
+              trigger: GitHubTrigger.WEBHOOK,
             })
           ],
         },
