@@ -1,0 +1,3 @@
+[submodule "lambda/lambda-nextjs"]
+	path = lambda/lambda-nextjs
+	url = git@github.com:frndmg/lambda-nextjs
