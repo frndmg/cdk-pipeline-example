@@ -48,7 +48,6 @@ export class PipelineStack extends Stack {
         phases: {
           install: {
             commands: [
-              'cd lambda',
               'npm install',
             ],
           },
@@ -57,10 +56,9 @@ export class PipelineStack extends Stack {
           },
         },
         artifacts: {
-          'base-directory': 'lambda',
           files: [
+            '.next/**/*',
             'index.js',
-            'node_modules/**/*',
           ],
         },
       }),
