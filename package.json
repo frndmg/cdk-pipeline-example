@@ -2,7 +2,7 @@
   "name": "cdk-codebuild-react",
   "version": "0.1.0",
   "bin": {
-    "cdk-codebuild-react": "bin/cdk-codebuild-react.js"
+    "main": "bin/main.js"
   },
   "scripts": {
     "build": "tsc",
